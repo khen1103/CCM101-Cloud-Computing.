@@ -1,54 +1,13 @@
-# Storage Types Research: Block vs. File vs. Object Storage
+# Checkpoint 2 - Research: Types of Cloud Storage
 
-## Introduction
-In cloud computing and data engineering, choosing the right storage architecture is critical for performance, scalability, cost, and accessibility. This document outlines the three primary cloud storage types: Block Storage, File Storage, and Object Storage.
+## Cloud Storage Comparison Table
 
----
-
-## 1. Block Storage
-* **Definition:** Raw storage volumes where data is split into identically sized blocks. Each block has its own unique address but no file-system structure of its own at the lower level.
-* **How it Works:** The operating system manages the file system, breaking files down and distributing the blocks across storage media. When requested, blocks are reassembled.
-* **Use Cases:** 
-  * High-performance database storage (e.g., MySQL, PostgreSQL).
-  * Enterprise virtual machine boot volumes (e.g., AWS EBS, Azure Disk).
-  * High IOPS workloads requiring low latency.
-* **Pros & Cons:**
-  * **Pros:** Extremely fast, low latency, highly customizable file system control.
-  * **Cons:** Expensive, difficult to share data directly across multiple instances without a specialized cluster file system.
-
----
-
-## 2. File Storage
-* **Definition:** Hierarchical storage architecture that organizes data into files and folders, mimicking a traditional filing cabinet or desktop directory tree.
-* **How it Works:** Files are stored with metadata (name, size, creation date) and organized into directories and subdirectories. Access is governed by network file protocols like NFS (Network File System) or SMB (Server Message Block).
-* **Use Cases:**
-  * Shared network folders for corporate employees.
-  * Content Management Systems (CMS) and web server shared assets.
-  * Development environments requiring shared code directories.
-* **Pros & Cons:**
-  * **Pros:** Easy to understand and navigate, excellent for user collaboration and shared file access.
-  * **Cons:** Harder to scale horizontally when dealing with billions of files; performance can degrade as directory trees grow massive.
-
----
-
-## 3. Object Storage
-* **Definition:** Flat data storage structure designed to handle massive amounts of unstructured data (images, videos, backups, logs). Data is managed as distinct "objects" rather than files or blocks.
-* **How it Works:** Every object consists of the data itself, a variable amount of metadata, and a unique global identifier (key/URL). Data is accessed via RESTful APIs (HTTP/HTTPS) rather than standard file paths.
-* **Use Cases:**
-  * Large-scale web application asset storage (e.g., user profile pictures, media streaming).
-  * Data lakes and big-data analytics.
-  * Long-term archiving, disaster recovery, and backups.
-* **Pros & Cons:**
-  * **Pros:** Infinitely scalable, highly cost-effective, rich metadata search capabilities, accessible over the web via APIs.
-  * **Cons:** Not suitable for random write operations or low-latency database transactions (cannot easily modify just a "byte" inside an object; you must replace the whole object).
-
----
-
-## Summary Comparison Table
-
-| Feature | Block Storage | File Storage | Object Storage |
+| Storage Type | Description (How does it store data?) | Primary Use Case | Cloud Provider Example |
 | :--- | :--- | :--- | :--- |
-| **Structure** | Raw Blocks (Volumes) | Hierarchical Files & Folders | Flat Namespace (Objects & Metadata) |
-| **Access Protocol** | SCSI, SAN, iSCSI | NFS, SMB | HTTP/REST API (S3 compatible) |
-| **Scalability** | Moderate (Tied to compute limits) | High (Up to file system limits) | Massive / Practically Infinite |
-| **Primary Use Case** | Databases & VM Boot Disks | Shared Corporate Directories | Unstructured Data, Media & Backups |
+| **Block Storage** | Data is split into raw, identically sized blocks, each with its own address, managed directly by the operating system's file system[cite: 1]. | High-performance databases and virtual machine boot disks[cite: 1]. | AWS EBS (Elastic Block Store), Azure Disk |
+| **File Storage** | Hierarchical file system structure that organizes data into files and folders using directories and subdirectories, accessed via network file protocols like NFS/SMB[cite: 1]. | Shared corporate network folders and collaborative development environments[cite: 1]. | AWS EFS (Elastic File System), Azure Files |
+| **Object Storage** | Flat storage structure that manages data as distinct "objects" consisting of data, metadata, and a unique global ID, accessed via RESTful HTTP/S APIs[cite: 1]. | Massive unstructured data, media streaming, web assets, and data backups[cite: 1]. | AWS S3 (Simple Storage Service), MinIO |
+
+## Explanation to the Client
+
+Object Storage is the ideal and most cost-effective choice for storing your user-uploaded images because its flat namespace and API-driven architecture allow for infinite scalability without performance degradation[cite: 1]. Unlike block or file storage, it seamlessly handles millions of independent media files while providing high durability and fast web accessibility[cite: 1].
