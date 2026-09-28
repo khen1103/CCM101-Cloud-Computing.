@@ -7,38 +7,25 @@
   <img src="https://img.shields.io/badge/LINUX-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
 </p>
 
-> **Mission Objective:** Deploy an S3-compatible, high-performance object storage server using MinIO on Docker, establish secure web console access, and manage unstructured media assets for a scalable application.
+> Mission Objective: Deploy an S3-compatible, high-performance object storage server using MinIO on Docker, establish secure web console access, and manage unstructured media assets for a scalable application.
 
----
+## Mission Overview
+As part of the Cloud Data Engineering Team at CloudNova Technologies, this proof-of-concept project addresses the core challenge of ephemeral container storage. Web applications cannot safely store persistent media assets inside ephemeral web server containers. This activity establishes an independent object storage backend for hosting unstructured media assets.
 
-## 📌 Mission Overview
+## Objectives & Key Deliverables
+- Differentiate between Block, File, and Object Storage.
+- Deploy an S3-compatible Object Storage server (MinIO) using Docker.
+- Access a cloud service via a web interface using port forwarding.
+- Create a storage bucket and upload objects (files) to the cloud.
+- Document cloud storage operations using Markdown.
 
-As part of the Cloud Data Engineering Team at **CloudNova Technologies**, this proof-of-concept project addresses the core challenge of ephemeral container storage. Web applications cannot safely store persistent media assets inside ephemeral web server containers. This activity establishes an independent, production-grade object storage backend tailored for hosting unstructured media assets.
+## Tools & Technologies Used
+- Docker
+- MinIO
+- KillerCoda Playground
+- Markdown (.md)
 
----
-
-## 🎯 Objectives & Key Deliverables
-
-- [x] **Differentiate Storage Tiers:** Compare Block, File, and Object storage architectures.
-- [x] **Containerized Deployment:** Deploy MinIO S3-compatible object storage via Docker utilizing environment variables.
-- [x] **Cloud Console Management:** Access the management web UI via port forwarding and configure secure storage buckets[cite: 1].
-- [x] **Data Ingestion & Verification:** Upload sample files into isolated buckets as a proof of concept[cite: 1].
-- [x] **Technical Documentation:** Maintain comprehensive Markdown logs and architectural evidence[cite: 1].
-
----
-
-## 🛠️ Tools & Technologies Used
-
-* **Docker:** Containerization engine for running isolated microservices[cite: 1].
-* **MinIO:** High-performance, AWS S3-compatible object storage server[cite: 1].
-* **KillerCoda Playground:** Cloud-based Linux environment for executing infrastructure tasks[cite: 1].
-* **Markdown (.md):** Technical documentation and reporting format[cite: 1].
-
----
-
-## 📂 Laboratory Structure & Navigation
-
-```text
+## Repository Structure
 Laboratory-05-Cloud-Data-Engineer/
 ├── README.md
 ├── storage-types-research.md
