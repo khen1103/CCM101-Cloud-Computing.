@@ -1,5 +1,4 @@
-# MinIO Deployment Documentation
-
+# 📦 MinIO Deployment Documentation
 ## 1. Docker Deployment Command
 To deploy the MinIO server container, the following exact Docker command was executed in the KillerCoda environment:
 
