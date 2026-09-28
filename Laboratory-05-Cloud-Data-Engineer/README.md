@@ -23,3 +23,12 @@ As part of the Cloud Data Engineering Team at CloudNova Technologies, this proje
 - 🐳 Docker Engine
 - 🐙 GitHub Repository
 - ⚡ MinIO Server
+- 🖥️ MinIO Web Console
+
+---
+
+## 🧠 Skills Learned
+- ⚙️ Container deployment and port mapping configuration using Docker CLI.
+- 🔧 Troubleshooting image tags, registries, and container authorization barriers.
+- 📂 Managing cloud storage resources, access policies, and bucket structures.
+- 📝 Technical documentation and structuring lab reports for cloud data engineering workflows.
