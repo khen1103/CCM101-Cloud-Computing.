@@ -1,7 +1,14 @@
-# 📦 MinIO Deployment Documentation
+# ⚙️ Technical Documentation: MinIO Container Deployment
 
-## 🚀 1. Docker Deployment Command
-To deploy the MinIO server container, the following exact Docker command was executed in the KillerCoda environment:
+## 🚀 Docker Execution Command
+
+The S3-compatible MinIO object storage engine was deployed as an isolated container using the following command:
 
 ```bash
-docker run -d --name minio-server -p 9000:9000 -p 9001:9001 -e "MINIO_ROOT_USER=admin" -e "MINIO_ROOT_PASSWORD=CloudNova2026!" bitnamilegacy/minio:2025.4.3-debian-12-r0
+docker run -d \
+  -p 9000:9000 \
+  -p 9001:9001 \
+  --name minio-server \
+  -e "MINIO_ROOT_USER=cloudadmin" \
+  -e "MINIO_ROOT_PASSWORD=CloudNova2026!" \
+  bitnamilegacy/minio:2025.4.3-debian-12-r0
