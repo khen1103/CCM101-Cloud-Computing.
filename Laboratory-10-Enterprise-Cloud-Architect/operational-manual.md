@@ -4,7 +4,7 @@
 ---
 
 ## 🌐 1. System Architecture Overview
-This operational manual serves as the official handover document for maintaining our enterprise-grade private cloud platform powered by **Nextcloud** and **MariaDB 10.11** on an **Ubuntu Server** VM[cite: 8].
+This operational manual serves as the official handover document for maintaining our enterprise-grade private cloud platform powered by **Nextcloud** and **MariaDB 10.11** on an **Ubuntu Server** VM.
 
 ---
 
