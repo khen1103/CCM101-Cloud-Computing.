@@ -1,5 +1,5 @@
 # 📘 Enterprise Operational Manual: Nextcloud Private Cloud Infrastructure
-**Author:** Khenjee Marzan Agmata | **Course:** CCM101 Cloud Computing (Mission 10)[cite: 8]
+**Author:** Khenjee Marzan Agmata | **Course:** CCM101 Cloud Computing (Mission 10)
 
 ---
 
