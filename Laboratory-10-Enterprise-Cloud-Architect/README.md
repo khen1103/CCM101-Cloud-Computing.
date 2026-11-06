@@ -1,5 +1,5 @@
 # 🚀 Laboratory 10: Enterprise Cloud Architect (Mission 10)
-> **Author:** Khenjee Marzan Agmata  
+> **Group:** Agmata, Khenjee M.,
 > **Course:** CCM101 Cloud Computing  
 > **Institution:** University of Eastern Pangasinan 🏫  
 
